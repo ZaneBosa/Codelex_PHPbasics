@@ -72,15 +72,15 @@ for ($i = 0; $i < count($hiddenLetters); $i++) {
 echo PHP_EOL;
 
 
-$maxGuess = 10;
-$guess[] = [];
-$misses[] = [];
+$maxGuess = 9;
+$guess = [];
+$misses = [];
 $leftToGuess = $maxGuess - (count($guess) + count($misses));
 
 
 while (true) {
     echo '-=-=-=-=-=-=-=-=-=-=-=-=-=-' . PHP_EOL;
-    echo 'Word: ' . implode(' ', $hiddenLetters) . PHP_EOL;
+    echo 'Word: ' . implode(' ', $hiddenLetters[$i]) . PHP_EOL;
     echo 'Misses: ' . implode(' ', $misses) . PHP_EOL;
     $input = readline('Your guess: ');
     echo PHP_EOL;
